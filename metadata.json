@@ -1,0 +1,6 @@
+{
+  "name": "NEUTRIX: Modular Industrial Emission Treatment System",
+  "description": "Capture. Convert. Protect. An adaptive, modular emission-treatment architecture that selects treatment stages according to pollutant composition and dynamically adjusts reagent dosing using mass-flow calculation, stoichiometric demand estimation, and sensor feedback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

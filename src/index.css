@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Epilogue', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #07111F;
+    color: #F8FAFC;
+    letter-spacing: 0.01em;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Subtle engineering background grid */
+.bg-engineering-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+}
+
+.bg-engineering-dots {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Animated SVG flow strokes */
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes dashFlowReverse {
+  to {
+    stroke-dashoffset: 24;
+  }
+}
+
+.animate-flow-fast {
+  stroke-dasharray: 6 6;
+  animation: dashFlow 0.9s linear infinite;
+}
+
+.animate-flow-medium {
+  stroke-dasharray: 8 6;
+  animation: dashFlow 1.5s linear infinite;
+}
+
+.animate-flow-slow {
+  stroke-dasharray: 4 8;
+  animation: dashFlow 2.2s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flow-fast,
+  .animate-flow-medium,
+  .animate-flow-slow {
+    animation: none;
+  }
+}
